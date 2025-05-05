@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://luren.cz',
-	integrations: [mdx(), sitemap()],
+	integrations: [sitemap()],
 	outDir: 'docs',
 	output: 'static'
 });
