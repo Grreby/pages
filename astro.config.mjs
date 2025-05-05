@@ -7,5 +7,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://luren.cz',
 	integrations: [mdx(), sitemap()],
+	outDir: 'docs',
 	output: 'static'
 });
