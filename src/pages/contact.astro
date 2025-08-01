@@ -1,0 +1,78 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Kontakt";
+const description = "Napište mi!";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 50px;
+      }
+
+      .prose {
+        width: 720px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+      }
+
+      .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
+      }
+
+      .title h1 {
+        margin: 0 0 0.5em 0;
+      }
+
+      .contact-info {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-top: 2rem;
+      }
+
+      .contact-info a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <div class="prose">
+        <div class="title">
+          <h1>{title}</h1>
+          <hr />
+        </div>
+
+        <div class="contact-info">
+          <p>Vyskytuji se na těchto platformách:</p>
+          <p><strong>Email:</strong> <a href="mailto:grreby@proton.me">grreby@proton.me</a></p>
+          <p><strong>Matrix:</strong> <a href="https://matrix.to/@grreby:matrix.org#/@grreby:matrix.org">grreby</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/grreby">grreby</a></p>
+          <p><strong>Codeberg: </strong><a href="https://codeberg.org/luren">luren</a></p>
+          <p><strong>YouTube: </strong><a href="https://www.youtube.com/channel/UCvdcWjftcHQJolrybFXwftw">luren</a></p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

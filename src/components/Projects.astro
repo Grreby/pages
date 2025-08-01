@@ -1,0 +1,84 @@
+---
+const projects = [
+  {
+    title: "Boží Soud",
+    description: "Zábavná videohra vytvořená v Godotu",
+    image: "/public/finaltrial.png",
+    link: "https://codeberg.org/dystopia/final-trial"
+  },
+  {
+    title: "REŠOL",
+    description: "Již neprovozovaná alternativní aplikace pro Školu Online",
+    image: "/public/resol-rozvrh.png",
+    link: "https://codeberg.org/resol/resol"
+  },
+];
+---
+
+<section class="projects">
+  <h2>Mé projekty</h2>
+  <div class="project-grid">
+    {projects.map(project => (
+      <a href={project.link} target="_blank"><div class="project-card">
+        <img src={project.image} alt={project.title} />
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+      </div></a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  a {
+    all: unset;
+}
+  a:hover {
+    cursor:pointer;
+  }
+
+  .projects h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }

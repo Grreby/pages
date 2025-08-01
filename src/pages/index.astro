@@ -2,6 +2,10 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Videos from '../components/Videos.astro';
+import Projects from '../components/Projects.astro';
+import Gallery from '../components/Gallery.astro';
+
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,12 +17,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Vítejte na mém webu.</h1>
-			<h1>Odkazy</h1>
-				<a href="https://matrix.to/@grreby:matrix.org#/@grreby:matrix.org" target="_blank">Matrix</a>
-				<a href="https://codeberg.org/luren">Codeberg</a>
-				<a href="https://github.com/Grreby">Github</a>
-				<a href="https://gitlab.com/Grreby">GitLab</a>
+			<div class="container">
+				<Projects />
+				<Videos />
+				<Gallery/>
+			  </div>
 		</main>
 		<Footer />
 	</body>

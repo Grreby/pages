@@ -1,0 +1,82 @@
+---
+const videos = [
+  {
+    id: "bheS6F6AmW8",
+    title: "Nebezpečí DIGITALIZACE: umělá inteligence v rukou státu"
+  },
+];
+---
+
+<section class="videos">
+  <h2>Má videa</h2>
+  <div class="video-grid">
+    {videos.map(video => (
+      <div class="video-card">
+        <iframe
+          src={`https://www.youtube.com/embed/${video.id}`}
+          title={video.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <p>{video.title}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .videos {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  .videos h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .video-card iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .video-card p {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  @media (min-width: 700px) {
+    .video-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .video-card iframe {
+      height: 240px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .video-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .video-card iframe {
+    height: 280px;
+    }
+  }
+</style>

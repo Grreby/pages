@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Luren.cz';
-export const SITE_DESCRIPTION = 'Moje osobní stránka';
+export const SITE_DESCRIPTION = 'Moje osobní stránka o mých projektech.';
